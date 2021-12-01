@@ -64,10 +64,10 @@
                 prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             labelContainer.childNodes[i].innerHTML = classPrediction;
         }*/
-        if(prediction[0] > 0.33){
+        if(prediction[0].probability.toFixed(2) > 0.33){
             labelContainer.innerHTML = "生肉です";
         }
-        else if(prediction[1] > 0.33){
+        else if(prediction[1].probability.toFixed(2) > 0.33){
             labelContainer.innerHTML = "あと少し焼こう";
         }
         else{
